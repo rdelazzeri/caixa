@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>Bem-vindo!</h1>
+    <p>Meu caixa .Feito!</p>
+    <p>
+      {% if user.is_authenticated %}
+        <a href="/accounts/logout">SAIR</a>
+      {% else %}
+        <a href="/accounts/login">LOGIN</a>
+      {% endif %}
+    </p>
+  </div>
+</div>
+
+{% endblock content %}
+
