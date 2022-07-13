@@ -2,3 +2,899 @@ Session data corrupted
 Session data corrupted
 Session data corrupted
 Session data corrupted
+Not Found: /caixa/list
+Internal Server Error: /caixa/list
+Traceback (most recent call last):
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\backends\sqlite3\base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: caixa_cc
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\pasqua\meucaixa\caixa\views.py", line 95, in cx_list
+    page_obj = paginator.get_page(page_number)
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\paginator.py", line 66, in get_page
+    number = self.validate_number(number)
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\paginator.py", line 53, in validate_number
+    if number > self.num_pages:
+  File "C:\pasqua\pasqua\lib\site-packages\django\utils\functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\paginator.py", line 102, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "C:\pasqua\pasqua\lib\site-packages\django\utils\functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\paginator.py", line 96, in count
+    return c()
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\query.py", line 470, in count
+    return self.query.get_count(using=self.db)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 552, in get_count
+    number = obj.get_aggregation(using, ["__count"])["__count"]
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 537, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\compiler.py", line 1361, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\backends\sqlite3\base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: caixa_cc
+Internal Server Error: /caixa/list
+Traceback (most recent call last):
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\backends\sqlite3\base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: caixa_cc
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\pasqua\meucaixa\caixa\views.py", line 95, in cx_list
+    page_obj = paginator.get_page(page_number)
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\paginator.py", line 66, in get_page
+    number = self.validate_number(number)
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\paginator.py", line 53, in validate_number
+    if number > self.num_pages:
+  File "C:\pasqua\pasqua\lib\site-packages\django\utils\functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\paginator.py", line 102, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "C:\pasqua\pasqua\lib\site-packages\django\utils\functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\paginator.py", line 96, in count
+    return c()
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\query.py", line 470, in count
+    return self.query.get_count(using=self.db)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 552, in get_count
+    number = obj.get_aggregation(using, ["__count"])["__count"]
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 537, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\compiler.py", line 1361, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\backends\sqlite3\base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: caixa_cc
+Internal Server Error: /caixa/list
+Traceback (most recent call last):
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\backends\sqlite3\base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: caixa_cc
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\pasqua\meucaixa\caixa\views.py", line 95, in cx_list
+    page_obj = paginator.get_page(page_number)
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\paginator.py", line 66, in get_page
+    number = self.validate_number(number)
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\paginator.py", line 53, in validate_number
+    if number > self.num_pages:
+  File "C:\pasqua\pasqua\lib\site-packages\django\utils\functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\paginator.py", line 102, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "C:\pasqua\pasqua\lib\site-packages\django\utils\functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\paginator.py", line 96, in count
+    return c()
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\query.py", line 470, in count
+    return self.query.get_count(using=self.db)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 552, in get_count
+    number = obj.get_aggregation(using, ["__count"])["__count"]
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 537, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\compiler.py", line 1361, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\backends\sqlite3\base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: caixa_cc
+Internal Server Error: /caixa/list
+Traceback (most recent call last):
+  File "C:\pasqua\pasqua\lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'financeiro'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\pasqua\meucaixa\caixa\views.py", line 101, in cx_list
+    return render(request, 'caixa/cx_list.html', {'page_obj': page_obj, 'lista': lista, 'lote': lote})
+  File "C:\pasqua\pasqua\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\pasqua\pasqua\lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'financeiro' is not a registered namespace
+Internal Server Error: /caixa/new
+Traceback (most recent call last):
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\pasqua\meucaixa\caixa\views.py", line 166, in cx_new
+    return render(request, 'caixa/cx_detail.html', {'form': form})
+  File "C:\pasqua\pasqua\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1059, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 739, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "C:\pasqua\pasqua\lib\site-packages\crispy_forms\templatetags\crispy_forms_filters.py", line 102, in as_crispy_field
+    raise CrispyError("|as_crispy_field got passed an invalid or inexistent field")
+crispy_forms.exceptions.CrispyError: |as_crispy_field got passed an invalid or inexistent field
+Internal Server Error: /caixa/new
+Traceback (most recent call last):
+  File "C:\pasqua\pasqua\lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'cadastro'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\pasqua\meucaixa\caixa\views.py", line 166, in cx_new
+    return render(request, 'caixa/cx_detail.html', {'form': form})
+  File "C:\pasqua\pasqua\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1059, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 739, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "C:\pasqua\pasqua\lib\site-packages\crispy_forms\templatetags\crispy_forms_filters.py", line 122, in as_crispy_field
+    return template.render(c)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\crispy_forms\templatetags\crispy_forms_field.py", line 130, in render
+    return str(field)
+  File "C:\pasqua\pasqua\lib\site-packages\django\utils\html.py", line 382, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "C:\pasqua\pasqua\lib\site-packages\django\forms\boundfield.py", line 34, in __str__
+    return self.as_widget()
+  File "C:\pasqua\pasqua\lib\site-packages\django\forms\boundfield.py", line 99, in as_widget
+    return widget.render(
+  File "C:\pasqua\pasqua\lib\site-packages\dal\widgets.py", line 151, in render
+    widget = super(WidgetMixin, self).render(name, value, attrs, **kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\forms\widgets.py", line 275, in render
+    context = self.get_context(name, value, attrs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\forms\widgets.py", line 729, in get_context
+    context = super().get_context(name, value, attrs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\forms\widgets.py", line 687, in get_context
+    context = super().get_context(name, value, attrs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\forms\widgets.py", line 268, in get_context
+    "attrs": self.build_attrs(self.attrs, attrs),
+  File "C:\pasqua\pasqua\lib\site-packages\dal\widgets.py", line 60, in build_attrs
+    if self.url is not None:
+  File "C:\pasqua\pasqua\lib\site-packages\dal\widgets.py", line 166, in _get_url
+    return reverse(self._url)
+  File "C:\pasqua\pasqua\lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'cadastro' is not a registered namespace
+Internal Server Error: /caixa/new
+Traceback (most recent call last):
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\pasqua\meucaixa\caixa\views.py", line 166, in cx_new
+    return render(request, 'caixa/cx_detail.html', {'form': form})
+  File "C:\pasqua\pasqua\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1059, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 739, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "C:\pasqua\pasqua\lib\site-packages\crispy_forms\templatetags\crispy_forms_filters.py", line 122, in as_crispy_field
+    return template.render(c)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\crispy_forms\templatetags\crispy_forms_field.py", line 130, in render
+    return str(field)
+  File "C:\pasqua\pasqua\lib\site-packages\django\utils\html.py", line 382, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "C:\pasqua\pasqua\lib\site-packages\django\forms\boundfield.py", line 34, in __str__
+    return self.as_widget()
+  File "C:\pasqua\pasqua\lib\site-packages\django\forms\boundfield.py", line 99, in as_widget
+    return widget.render(
+  File "C:\pasqua\pasqua\lib\site-packages\dal\widgets.py", line 151, in render
+    widget = super(WidgetMixin, self).render(name, value, attrs, **kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\forms\widgets.py", line 275, in render
+    context = self.get_context(name, value, attrs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\forms\widgets.py", line 729, in get_context
+    context = super().get_context(name, value, attrs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\forms\widgets.py", line 687, in get_context
+    context = super().get_context(name, value, attrs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\forms\widgets.py", line 268, in get_context
+    "attrs": self.build_attrs(self.attrs, attrs),
+  File "C:\pasqua\pasqua\lib\site-packages\dal\widgets.py", line 60, in build_attrs
+    if self.url is not None:
+  File "C:\pasqua\pasqua\lib\site-packages\dal\widgets.py", line 166, in _get_url
+    return reverse(self._url)
+  File "C:\pasqua\pasqua\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\urls\resolvers.py", line 802, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'nome-autocomplete' not found. 'nome-autocomplete' is not a valid view function or pattern name.
+Internal Server Error: /caixa/detail/1
+Traceback (most recent call last):
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\pasqua\meucaixa\caixa\views.py", line 151, in cx_detail
+    form = CX_detail_form(instance=cp)
+NameError: name 'cp' is not defined
+Internal Server Error: /caixa/list
+Traceback (most recent call last):
+  File "C:\pasqua\pasqua\lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'comercial'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\pasqua\meucaixa\caixa\views.py", line 101, in cx_list
+    return render(request, 'caixa/cx_list.html', {'page_obj': page_obj, 'lista': lista, 'lote': lote})
+  File "C:\pasqua\pasqua\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\loader_tags.py", line 208, in render
+    return template.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 177, in render
+    return self._render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\pasqua\pasqua\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\pasqua\pasqua\lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'comercial' is not a registered namespace
+Internal Server Error: /parc-autocomplete/
+Traceback (most recent call last):
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\dal\views.py", line 59, in dispatch
+    return super(ViewMixin, self).dispatch(request, *args, **kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\views\generic\base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\views\generic\list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "C:\pasqua\meucaixa\caixa\views.py", line 84, in get_queryset
+    qs = qs.filter(nome__icontains=self.q)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\query.py", line 1071, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\query.py", line 1089, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\query.py", line 1096, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1502, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1532, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1377, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1187, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1677, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'nome' into field. Choices are: cc, desc, id
+Internal Server Error: /caixa/list
+Traceback (most recent call last):
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\pasqua\meucaixa\caixa\views.py", line 101, in cx_list
+    paginator = Paginator(lista.qs, 20) # Show 25 contacts per page.
+  File "C:\pasqua\pasqua\lib\site-packages\django_filters\filterset.py", line 230, in qs
+    qs = self.filter_queryset(qs)
+  File "C:\pasqua\pasqua\lib\site-packages\django_filters\filterset.py", line 213, in filter_queryset
+    queryset = self.filters[name].filter(queryset, value)
+  File "C:\pasqua\pasqua\lib\site-packages\django_filters\filters.py", line 158, in filter
+    qs = self.get_method(qs)(**{lookup: value})
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\query.py", line 1071, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\query.py", line 1089, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\query.py", line 1096, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1502, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1532, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1377, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1187, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1677, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'data_emissao' into field. Choices are: banco, conta, conta_id, credito, data, debito, desc, id, pessoa, pessoa_id
+Internal Server Error: /parc-autocomplete/
+Traceback (most recent call last):
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\dal\views.py", line 59, in dispatch
+    return super(ViewMixin, self).dispatch(request, *args, **kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\views\generic\base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\views\generic\list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "C:\pasqua\meucaixa\caixa\views.py", line 84, in get_queryset
+    qs = qs.filter(nome__icontains=self.q)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\query.py", line 1071, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\query.py", line 1089, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\query.py", line 1096, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1502, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1532, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1377, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1187, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1677, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'nome' into field. Choices are: cc, desc, id
+Internal Server Error: /parc-autocomplete/
+Traceback (most recent call last):
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\dal\views.py", line 59, in dispatch
+    return super(ViewMixin, self).dispatch(request, *args, **kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\views\generic\base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\views\generic\list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "C:\pasqua\meucaixa\caixa\views.py", line 84, in get_queryset
+    qs = qs.filter(nome__icontains=self.q)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\query.py", line 1071, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\query.py", line 1089, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\query.py", line 1096, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1502, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1532, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1377, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1187, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1677, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'nome' into field. Choices are: cc, desc, id
+Internal Server Error: /parc-autocomplete/
+Traceback (most recent call last):
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\dal\views.py", line 59, in dispatch
+    return super(ViewMixin, self).dispatch(request, *args, **kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\views\generic\base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\views\generic\list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "C:\pasqua\meucaixa\caixa\views.py", line 84, in get_queryset
+    qs = qs.filter(nome__icontains=self.q)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\query.py", line 1071, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\query.py", line 1089, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\query.py", line 1096, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1502, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1532, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1377, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1187, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1677, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'nome' into field. Choices are: cc, desc, id
+Not Found: /favicon.ico
+Not Found: /admin/select2_one_to_one/tmodel/add/
+Internal Server Error: /parc-autocomplete/
+Traceback (most recent call last):
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\dal\views.py", line 59, in dispatch
+    return super(ViewMixin, self).dispatch(request, *args, **kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\views\generic\base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\views\generic\list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "C:\pasqua\meucaixa\caixa\views.py", line 84, in get_queryset
+    qs = qs.filter(nome__icontains=self.q)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\query.py", line 1071, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\query.py", line 1089, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\query.py", line 1096, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1502, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1532, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1377, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1187, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1677, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'nome' into field. Choices are: cc, desc, id
+Internal Server Error: /parc-autocomplete/
+Traceback (most recent call last):
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\dal\views.py", line 59, in dispatch
+    return super(ViewMixin, self).dispatch(request, *args, **kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\views\generic\base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\views\generic\list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "C:\pasqua\meucaixa\caixa\views.py", line 84, in get_queryset
+    qs = qs.filter(nome__icontains=self.q)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\query.py", line 1071, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\query.py", line 1089, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\query.py", line 1096, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1502, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1532, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1377, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1187, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1677, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'nome' into field. Choices are: cc, desc, id
+Internal Server Error: /parc-autocomplete/
+Traceback (most recent call last):
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\dal\views.py", line 59, in dispatch
+    return super(ViewMixin, self).dispatch(request, *args, **kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\views\generic\base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\views\generic\list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "C:\pasqua\meucaixa\caixa\views.py", line 84, in get_queryset
+    qs = qs.filter(nome__icontains=self.q)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\query.py", line 1071, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\query.py", line 1089, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\query.py", line 1096, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1502, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1532, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1377, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1187, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1677, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'nome' into field. Choices are: cc, desc, id
+Internal Server Error: /parc-autocomplete/
+Traceback (most recent call last):
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\pasqua\pasqua\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\dal\views.py", line 59, in dispatch
+    return super(ViewMixin, self).dispatch(request, *args, **kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\views\generic\base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\views\generic\list.py", line 154, in get
+    self.object_list = self.get_queryset()
+  File "C:\pasqua\meucaixa\caixa\views.py", line 84, in get_queryset
+    qs = qs.filter(nome__icontains=self.q)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\query.py", line 1071, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\query.py", line 1089, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\query.py", line 1096, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1502, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1532, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1377, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1187, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\pasqua\pasqua\lib\site-packages\django\db\models\sql\query.py", line 1677, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'nome' into field. Choices are: cc, desc, id
+Not Found: /caixa/detail/caixa/new

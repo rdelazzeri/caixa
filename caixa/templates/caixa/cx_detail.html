@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<div class="jumbotron">
+    <form method="post" id="MyForm">
+        {% csrf_token %}
+        <div class="form-row">
+            <div class="form-group col-md-6 mb-0">
+                <h1>Contas a Pagar</h1>
+            </div>
+            <div class="form-group col-md-6 mb-0">
+                <button type="submit" name="act" value="save"id="salvar" class="btn btn-primary">Salvar</button>
+                <a href="/caixa/new"> <button type="button" class="btn btn-primary">Novo</button></a>
+                <a href="/caixa/list"> <button type="button" class="btn btn-primary">Pesquisar</button></a>
+                <button type="submit" name="act" value="delete" class="btn btn-primary">Deletar</button>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-2 mb-0">
+                {{ form.banco|as_crispy_field }}
+            </div>
+
+            <div class="form-group col-md-4 mb-0">
+                {{ form.conta|as_crispy_field }}
+            </div>
+            <div class="form-group col-md-4 mb-0">
+                {{ form.pessoa|as_crispy_field }}
+            </div>
+            <div class="form-group col-md-2 mb-0">
+                {{ form.data|as_crispy_field }}
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6 mb-0">
+                {{ form.desc|as_crispy_field }}
+            </div>
+            <div class="form-group col-md-3 mb-0">
+                {{ form.credito|as_crispy_field }}
+            </div>
+            <div class="form-group col-md-3 mb-0">
+                {{ form.debito|as_crispy_field }}
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}
+
+{% block extrascripts %}
+{{ form.media }}
+<script>
+     
+    const dt = document.getElementById('id_data');
+    dt.addEventListener("change", dt_function);
+
+    function dt_function(e) {
+        const today = new Date();
+        let dt = document.getElementById("id_data").value;
+        let new_date = addDays(today, dt);
+        document.getElementById("id_data").value = new_date
+        };
+
+    function addDays(date, days) {
+        const isNum = checkValue(days);
+        console.log(isNum);
+        if (isNum){
+            const nDays = parseInt(days, 10);
+            var newDate = new Date(date);
+            newDate.setDate(newDate.getDate() + nDays);
+            const dataFormatada = ((newDate.getDate() ) + "/" + ((newDate.getMonth() + 1)) + "/" + newDate.getFullYear());                 
+            return dataFormatada;        
+        } else {
+            return days
+        }
+        };
+
+    function checkValue(val){
+        const num = parseInt(val, 10);
+        console.log(num);
+        return !isNaN(val)
+        };
+    
+    function retDate(dateString){
+        var parts =dateString.split('/');
+        // Please pay attention to the month (parts[1]); JavaScript counts months from 0:
+        // January - 0, February - 1, etc.
+        var mydate = new Date(parts[2], parts[1] - 1, parts[0]); 
+        console.log(mydate.toDateString());
+        return mydate
+    }
+
+</script>
+
+{% endblock extrascripts %}

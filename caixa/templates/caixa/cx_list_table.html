@@ -1,0 +1,88 @@
+
+
+
+
+<table id="entrega-list-table" class="table table-hover">
+  <thead class="thead-light ">
+  <tr>
+    <th class="text-center chkAll" scope="col"><input type="checkbox" onclick="toggle(this);"></th>
+    <th class="text-center" scope="col">Banco</th>
+    <th class="text-center" scope="col">Data</th>
+    <th class="text-center" scope="col">Pessoa</th>
+    <th class="text-center" scope="col">Conta</th>
+    <th class="text-center" scope="col">Descrição</th>
+    <th class="text-center" scope="col">Crédito</th>
+    <th class="text-center" scope="col">Débito</th>
+    <th class="text-center" scope="col">Detalhe</th>
+  </tr>
+  </thead>
+  <tbody>
+  {% for it in page_obj.object_list %}
+    <tr>
+      <!-- <th class="text-center" scope="row">{{ forloop.counter }}</th> -->
+      <td class="text-center chk" ><input type="checkbox" name="chk" value="{{ it.pk }}"></td>
+      <td class="text-center">{{ it.banco }}</td>
+      <td class="text-center">{{ it.data|date:"SHORT_DATE_FORMAT" }}</td>
+      <td class="text-center">{{ it.pessoa }}</td>
+      <td class="text-center">{{ it.conta }}</td>
+      <td class="text-center">{{ it.desc }}</td>
+      <td class="text-center">{{ it.credito }}</td>
+      <td class="text-center">{{ it.debito }}</td>
+      
+      <td class="text-center">
+        <!-- open pedido full -->
+        <button type="button" id='detail' class="detail btn btn-sm btn-primary" data-form-url="{% url 'caixa:cx_detail' it.pk %}" >
+          <span class="fa fa-pencil"></span>
+        </button>
+      </td>
+    </tr>
+  {% endfor %}
+
+  </tbody>
+</table>
+
+<div>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      {% if page_obj.has_other_pages %}
+        {% if page_obj.has_previous %}
+          {% if 'banco' in request.get_full_path %}
+            <li class="page-item"><a class="page-link" href="{{ request.get_full_path }}&page={{ page_obj.previous_page_number }}">Anterior</a></li>
+          {% else %}
+            <li class="page-item"><a class="page-link" href="{% url 'caixa:cx_list' %}?page={{ page_obj.previous_page_number }}">Anterior</a></li>
+          {% endif %}
+        {% else %}
+          <li class="disabled page-link"><span>Anterior</span></li>
+        {% endif %}
+        
+        
+        {% for i in page_obj.paginator.get_elided_page_range %}
+          {% if page_obj.number == i %}
+            <li class="page-item active">
+              <a class="page-link" href="#">{{ i }} <span class="sr-only">(current)</span></a>
+            </li>
+          {% else %}
+            {% if 'banco' in request.get_full_path %}
+              <li class="page-item"><a class="page-link" href="{{ request.get_full_path }}&page={{ i }}">{{ i }}</a></li>
+            {% else %}
+              <li class="page-item"><a class="page-link" href="{% url 'caixa:cx_list' %}?page={{ i }}">{{ i }}</a></li>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+
+
+        {% if page_obj.has_next %}
+          {% if 'banco' in request.get_full_path %}
+            <li class="page-item"><a class="page-link" href="{{ request.get_full_path }}&page={{ page_obj.next_page_number }}">Próxima</a></li>
+          {% else %}
+            <li class="page-item"><a class="page-link" href="{% url 'caixa:cx_list' %}?page={{ page_obj.next_page_number }}">Próxima</a></li>
+          {% endif %}
+
+        {% else %}
+          <li class="disabled page-link "><span>Próxima</span></li>
+        {% endif %}
+
+      {% endif %}
+    </ul>
+  </nav>
+</div>
